@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="./img/header/icon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 </head>
 <body>
     <header>
@@ -113,17 +114,47 @@
     <main>
          <section id="banner">
         <div class="container">
-            <div class="banner-img-block">
-                <div class="banner-picture"></div>
-                <div class="banner-text-block">
-                    <h2 class="banner-title">隨身型動力</h2>
-                    <p>Surface Go 2 結合了平板電腦的多功能性與筆記型電腦的可攜性，非常適合用來處理日常工作、家庭作業和玩樂</p>
-                    <div class="banner-text-btn">
-                        <a class="banner-text-btn-a" href="">立即購買</a>
-                        <i class="fas fa-chevron-right"></i>
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="banner-img-block">
+                            <div class="banner-picture"></div>
+                                <div class="banner-text-block">
+                                    <h2 class="banner-title">隨身型動力</h2>
+                                    <p>Surface Go 2 結合了平板電腦的多功能性與筆記型電腦的可攜性，非常適合用來處理日常工作、家庭作業和玩樂</p>
+                                    <div class="banner-text-btn">
+                                    <a class="banner-text-btn-a" href="">立即購買</a>
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <div class="swiper-slide">
+                        <div class="banner-img-block">
+                            <div class="banner-picture-2"></div>
+                                <div class="banner-text-block-2">
+                                    <h2 class="banner-title-2">Surface Laptop Go</h2>
+                                    <p>運用我們所推出最輕巧的 Surface 筆記型電腦，善加利用每一天</p>
+                                    <div class="banner-text-btn">
+                                    <a class="banner-text-btn-a" href="">立即購買</a>
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    ...
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+            
             </div>
+            
         </div>
     </section>
 
@@ -602,5 +633,32 @@
         </div>
     </footer>
    
+
+
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // autoplay: {
+            //     delay: 3000,
+            // disableOnInteraction: false,
+            // },
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            });
+    </script>
 </body>
 </html>
