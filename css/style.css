@@ -294,9 +294,23 @@ body{
 }
 /* swiper */
 .swiper .swiper-button-prev, .swiper .swiper-button-next{
+    width: 36px;
+    height: 36px;
+    background-color: #ffffff;
+    border-radius: 50%;
     opacity: 0;
     color: black;
     transition-duration: 0.3s;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4) ;
+}
+.swiper .swiper-button-prev{
+    left: 0;
+}
+.swiper .swiper-button-next{
+    right: 0;
+}
+.swiper .swiper-button-prev::after, .swiper .swiper-button-next::after{
+   font-size: 16px;
 }
 .swiper:hover> .swiper-button-prev ,.swiper:hover> .swiper-button-next{
     opacity: 1;
@@ -304,10 +318,14 @@ body{
 .swiper .swiper-pagination-bullet{
     width: 6px;
     height: 6px;
-    background: black;
-    border: 1px solid black;
+    border: 1px solid black; 
+    background-color: rgba(0 ,0 ,0 ,0);
 }
 
+.swiper .swiper-pagination-bullet-active{
+    background: rgb(0, 0, 0);
+    
+}
 @media screen and (max-width:1399px){
     .banner-text-block>h2{
         font-size: 24px;
